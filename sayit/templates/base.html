@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>say-it</title>
+        <title>{% block title %}{% endblock %} - Say It With A Song</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon-precomposed" href="/favicon-152.png">
@@ -32,15 +32,17 @@
         <script src="{% static 'js/bundle.js' %}" async defer></script>
     </head>
     <body>
+        <header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'how' %}">How it Works</a></li>
+                    <li><a href="{% url 'musicians' %}">Musicians</a></li>
+                    <li><a href="{% url 'order' %}">Order Form</a></li>
+                </ul>
+            </nav>
+        </header>
         {% block content %}
-        <<nav class="nav">
-            <ul>
-                <li><a href="{% url 'home' %}"></a></li><!--
-             --><li><a href="{% url 'about' %}"></a></li><!--
-             --><li><a href="{% url 'musicians' %}"></a></li><!--
-             --><li><a href="{% url 'order' %}"></a></li>
-            </ul>
-        </nav>
         {% endblock content %}
 
         {# Structured Data for Logo and Social Profile Links #}
