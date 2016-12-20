@@ -33,6 +33,14 @@
     </head>
     <body>
         {% block content %}
+        <<nav class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}"></a></li><!--
+             --><li><a href="{% url 'about' %}"></a></li><!--
+             --><li><a href="{% url 'musicians' %}"></a></li><!--
+             --><li><a href="{% url 'order' %}"></a></li>
+            </ul>
+        </nav>
         {% endblock content %}
 
         {# Structured Data for Logo and Social Profile Links #}
