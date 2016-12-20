@@ -1,0 +1,4 @@
+domain: example.isl.codes
+heroku:
+  staging: say-it-staging
+  production: say-it

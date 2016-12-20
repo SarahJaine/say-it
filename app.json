@@ -1,0 +1,22 @@
+{
+  "name": "say-it",
+  "env":{
+    "DJANGO_SETTINGS_MODULE":{
+      "value": "sayit.settings"
+    },
+    "SECRET_KEY": {
+      "generator": "secret"
+    }
+  },
+  "addons":[
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

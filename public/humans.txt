@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Design and Engineering by Sarah-Jaine Szekeresh -- freelance@sarahjaine.com
+
+# THANKS
+
+	Django Cookiecutter template by ISL -- Digital Creative Agency -- @istrategylabs
+
+# TECHNOLOGY COLOPHON
+
+    Python, Django
