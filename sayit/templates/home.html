@@ -3,27 +3,30 @@
 
 {% block content %}
 <main>
-	<h1>Say It With a Song</h1>
-	<div class="row">
-		<div class="columns small-12 medium-8">
-			<p></p>
-		</div>
-		<div class="columns small-12 medium-4">
-			
-		</div>
-	</div>
-    
-    <section class="examples">
-    	<h2>Examples</h2>
+    <div class="row">
+        <h1>Say It With a Song</h1>
     	<div class="row">
-    		<div class="columns small-12 medium-6 large-4">
-    			<h3>Title</h3>
-    			<p class="text--subtitle">Subtitle</p>
-    			<p class="text--caption">Caption</p>
-
+    		<div class="small-12 medium-8 columns">
+    			<p>Whether you are celebrating a wedding, new baby, anniversary, birthday or any other special occasion, Say It With a Song is here to help you celebrate with style! We compose and record original songs tailored to your special event. Your special song can be created in any music style you like, and the lyrics can be in English, Spanish or French.</p>
+                <p>Additionally, we offer photo slideshows to accompany your song. This audio and visual display creates a special centerpiece for an unforgettable event.</p>
+    		</div>
+    		<div class="small-12 medium-4 columns">
+    			<video src=""></video>
     		</div>
     	</div>
-    </section>
-
+        
+        <h2>Examples</h2>
+        <div class="row">
+            {% for example in examples %}
+            <div class="small-12 medium-6 large-4 columns">
+                <h3>{{ example.title }}</h3>
+                <p class="text--subtitle">{{ example.product_type }}</p>
+                <p class="text--caption">{{ example.review }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        </div> 
+	</div> <!-- end main row -->
+    
 </main>
 {% endblock content %}
