@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Example, Musician
+from sayit.models import Example, Musician
 
 
 def publish(modeladmin, request, queryset):
