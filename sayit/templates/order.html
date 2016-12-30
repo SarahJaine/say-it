@@ -3,6 +3,30 @@
 
 {% block content %}
 <main>
-    <h1>Order</h1>
+	<div class="row">
+	    <h1>Start Your Order</h1>
+		<div class="row">
+		    <div class="small-12 medium-6 columns">
+		    	<h2>Order Form</h2>
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique suscipit doloribus veritatis delectus repellendus a fugiat commodi eos assumenda, repellat adipisci, harum possimus sint. Placeat, et asperiores magni? Autem, dolorum.</p>
+		        <form action="" method="post">
+		            {% csrf_token %}
+		            {% for each_field in form %}
+		                {{ each_field.errors }}
+		                {{ each_field.label_tag }}
+		                {{ each_field }}
+		            {% endfor %}
+		            <input type="submit" value="Submit" />
+		        </form>
+		    </div>
+
+		    <div class="small-12 medium-6 columns">
+		    	<h2>Contact Us</h2>
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique suscipit doloribus veritatis delectus repellendus a fugiat commodi eos assumenda, repellat adipisci, harum possimus sint. Placeat, et asperiores magni? Autem, dolorum.</p>
+		    	<a href=""></a>
+		    </div>
+		</div>
+	</div><!-- end main row -->
+
 </main>
 {% endblock content %}
