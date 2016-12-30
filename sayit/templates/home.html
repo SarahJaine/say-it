@@ -18,11 +18,13 @@
         <h2>Examples</h2>
         <div class="row">
             {% for example in examples %}
-            <div class="small-12 medium-6 large-4 columns">
-                <h3>{{ example.title }}</h3>
-                <p class="text--subtitle">{{ example.product_type }}</p>
-                <p class="text--caption">{{ example.review }}</p>
-            </div>
+                {% if example.status == 'p' %}
+                <div class="small-12 medium-6 large-4 columns">
+                    <h3>{{ example.title }}</h3>
+                    <p>{{ example.product_type }}</p>
+                    <p>{{ example.review }}</p>
+                </div>
+                {% endif %}
             {% endfor %}
         </div>
         </div> 

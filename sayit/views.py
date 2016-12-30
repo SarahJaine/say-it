@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.views.generic import ListView, TemplateView
-from sayit.models import Example
+from sayit.models import Example, Musician
 
 
 class HomeView(ListView):
@@ -14,8 +14,10 @@ class HowView(TemplateView):
     template_name = 'how.html'
 
 
-class MusiciansView(TemplateView):
+class MusiciansView(ListView):
     template_name = 'musicians.html'
+    model = Musician
+    context_object_name = 'musicians'
 
 
 class OrderView(TemplateView):
