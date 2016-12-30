@@ -30,6 +30,8 @@
 
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <script src="{% static 'js/bundle.js' %}" async defer></script>
+        <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
+
     </head>
     <body>
         <header>
@@ -44,6 +46,12 @@
         </header>
         {% block content %}
         {% endblock content %}
+        <footer>
+            <a href="{% url 'home' %}" class="block--align-left">Home</a>
+            <a href="mailto:order@sayitwithasong.co" target="_blank" class="block--align-right"><p class="visually-hidden">Send me an Email</p><i class="fa fa-envelope-square fa-lg fa-fw" aria-hidden="true"></i></a>
+            <a href="" target="_blank" class="block--align-right"><p class="visually-hidden">Facebook</p><i class="fa fa-facebook fa-lg fa-fw" aria-hidden="true"></i></a>
+            <a href="" target="_blank" class="block--align-right"><p class="visually-hidden">YouTube Channel</p><i class="fa fa-youtube fa-lg fa-fw" aria-hidden="true"></i></a>
+        </footer>
 
         {# Structured Data for Logo and Social Profile Links #}
         <script type="application/ld+json">
