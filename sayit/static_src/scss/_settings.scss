@@ -45,6 +45,18 @@
 
 // @import 'util/util';
 
+// i. Say It Color
+$gray: #A19AC3;
+$blue: #136fc6;
+$navy: #21295c;
+$red: #df3c00;
+$yellow: #daf25e;
+$pink: #BC35EA;
+$record: #332200;
+$color-accent-1: $red;
+$color-accent-2: $blue;
+$color-accent-3: $yellow;
+
 // // 1. Global
 // // ---------
 
@@ -62,10 +74,11 @@
 // $medium-gray: #cacaca;
 // $dark-gray: #8a8a8a;
 // $black: #0a0a0a;
-// $white: #fefefe;
-// $body-background: $white;
-// $body-font-color: $black;
-// $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$white: #fefefe;
+// $white: #EAF3F7;
+$body-background: $white;
+$body-font-color: $navy;
+$body-font-family: 'Open Sans', sans-serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
 // $global-padding: 1rem;
@@ -105,7 +118,7 @@
 // // 4. Base Typography
 // // ------------------
 
-// $header-font-family: $body-font-family;
+$header-font-family: 'Martel', serif;
 // $header-font-weight: $global-weight-normal;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -127,9 +140,9 @@
 //         'h6': 16,
 //     ),
 // );
-// $header-color: inherit;
+$header-color: $blue;
 // $header-lineheight: 1.4;
-// $header-margin-bottom: 0.5rem;
+$header-margin-bottom: 2rem;
 // $header-text-rendering: optimizeLegibility;
 // $small-font-size: 80%;
 // $header-small-font-color: $medium-gray;
