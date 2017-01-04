@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <script src="{% static 'js/bundle.js' %}" async defer></script>
         <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Martel|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Martel:300,400,600,900|Open+Sans" rel="stylesheet">
 
     </head>
     <body>
@@ -60,14 +60,14 @@
                 </div>
             </div>
         </nav>
-        <section class="main">
+        <main>
             <div class="row align-center">
                 <div class="small-10 columns">
                     {% block content %}
                     {% endblock content %}
                 </div>
             </div>
-        </section>
+        </main>
         <footer>
             <a href="{% url 'home' %}" class="block--align-left">Home</a>
             <a href="mailto:order@sayitwithasong.co" target="_blank" class="block--align-right"><p class="visually-hidden">Send me an Email</p><i class="fa fa-envelope-square fa-lg fa-fw" aria-hidden="true"></i></a>

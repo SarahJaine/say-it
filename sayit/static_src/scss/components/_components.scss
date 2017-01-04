@@ -48,8 +48,9 @@
 .nav__bar {
 	width: 100%;
 	background-color: $pink;
-	margin: 0 0 3rem 0;
+	margin-bottom: 1rem;
 }
+
 .nav__list {
 	li {
 		display: inline-block;
@@ -60,7 +61,6 @@
 		a {
 			position: relative;
 			color: $record;
-			text-decoration: none;
 		}
 		a:before {
 			content: "";
@@ -95,31 +95,71 @@
 }
 
 // Steps
-.step {
-	background-color: $yellow;
+
+%box {
+	background-color: $sea;
 	border-radius: 10px;
-	margin: 2rem 2rem 2rem 0;
-	padding: 2rem;
+	padding: 1.5rem;
+}
+
+.box-step {
+	@extend %box;
+	margin: 2rem;
 	position: relative;
 }
 
 .step__title {
-	font-size: 1.5rem;
-	margin: 0 0 0 4rem;
-	min-height: 2rem;
+	@extend %heading__large;
+	margin: 0 0 0 0.5rem;
+	@include breakpoint(medium) {
+		margin: 0 0 0 1rem;
+	}
+	@include breakpoint(large) {
+		margin: 0 0 0 2rem;
+	}
 }
 
 .step__copy {
-	margin: 0 0 0 4rem;
+	margin: 0;
+
 }
 
 .circle {
-	background-color: orange;
+	@extend %heading__jumbo;
+	background-color: $yellow;
 	border-radius: 100px;
-	border: 10px solid $navy;
-	font-size: 3rem;
-	padding: 0.5rem 2rem;
+	border: 0.5vw solid $navy;
+	color: $navy;
+	margin: 0;
 	position: absolute;
-	top: -2rem;
-	left: -2rem;
+	top: -1rem;
+	left: -1rem;
+	padding: 3px 15px;
+	@include breakpoint(medium) {
+		padding: 5px 18px;
+		top: -2rem;
+		left: -2rem;
+	}
+	@include breakpoint(large) {
+		padding: 10px 25px;
+	}
 }
+
+// Example
+.box-example {
+	@extend %box;
+	margin: 2rem 1rem 0 0;
+}
+
+.box-musician {
+	@extend %box;
+	margin: 1.5rem 0.5rem 1rem 0;
+}
+
+#circle-tiny {
+	border: 4px solid $header-color;
+	display: inline-block;
+	border-radius: 100px;
+	margin: 0 5px 4px;
+}
+

@@ -2,22 +2,20 @@
 {% block title %}Musicians{% endblock %}
 
 {% block content %}
-<main>
+<section class="musicians">
+	<h1>Meet the Musicians</h1>
 	<div class="row">
-    	<h1>Meet the Musicians</h1>
-    	<div class="row">
-    		{% for musician in musicians %}
-    			{% if musician.status == 'p' %}
-	    		<div class="small-12 medium-8 large-4 columns">    			
-					<h2>{{ musician.name }}</h2>
-					<p>{{ musician.position }}</p>
-					<p>{{ musician.musical_styles }}</p>
-					<p>{{ musician.bio }} <a href="{{ musician.profile_url }}">Check out my music</a>.</p>
-	    		</div>
-	    		{% endif %}
-    		{% endfor %}
-    	</div>
-    </div> <!-- end main row -->
-
-</main>
+		{% for musician in musicians %}
+			{% if musician.status == 'p' %}
+    		<div class="small-12 medium-8 large-4 columns">  
+    			<div class="box-musician">
+					<h2 class="heading__large">{{ musician.name }} <div id="circle-tiny"></div> {{ musician.position }}</h2>
+					<p class="heading__sub">{{ musician.musical_styles }}</p>
+					<p>{{ musician.bio }} <a href="{{ musician.profile_url }}" target="_blank">Check out my music</a>.</p>
+				</div>
+    		</div>
+    		{% endif %}
+		{% endfor %}
+	</div>
+</section>
 {% endblock content %}

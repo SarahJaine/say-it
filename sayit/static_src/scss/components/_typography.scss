@@ -1,0 +1,43 @@
+%heading__jumbo,
+.heading__jumbo {
+	font-weight: $font-weight-bold;
+	font-size: 1.6rem;
+	@include breakpoint(medium) {
+		font-size: 1.8rem;
+	}
+	@include breakpoint(large) {
+		font-size: 2rem;
+	}
+}
+
+%heading__large,
+.heading__large {
+	font-weight: $font-weight-bold;
+	font-size: 1.2rem;
+	@include breakpoint(medium) {
+		font-size: 1.3rem;
+	}
+	@include breakpoint(large) {
+		font-size: 1.5rem;
+	}
+}
+
+%heading__medium,
+.heading__medium {
+	font-weight: $font-weight-medium;
+	font-size: 0.8rem;
+	@include breakpoint(medium) {
+		font-size: 0.9rem;
+	}
+	@include breakpoint(large) {
+		font-size: 1rem;
+	}
+}
+
+.heading__sub {
+    font-weight: $font-weight-light;
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0 0 0.5rem 0;
+}
