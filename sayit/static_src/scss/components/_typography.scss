@@ -24,13 +24,13 @@
 
 %heading__medium,
 .heading__medium {
-	font-weight: $font-weight-medium;
+	font-weight: $font-weight-bold;
 	font-size: 0.8rem;
 	@include breakpoint(medium) {
-		font-size: 0.9rem;
+		font-size: 1rem;
 	}
 	@include breakpoint(large) {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 }
 

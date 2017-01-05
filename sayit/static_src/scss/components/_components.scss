@@ -55,9 +55,8 @@
 	li {
 		display: inline-block;
 		padding: 2.5rem 0 1rem 0;
-		font-family: $header-font-family;
-		font-weight: 600;
 		float: right;
+		@extend %heading__medium;
 		a {
 			position: relative;
 			color: $record;
@@ -95,7 +94,6 @@
 }
 
 // Steps
-
 %box {
 	background-color: $sea;
 	border-radius: 10px;
@@ -162,4 +160,3 @@
 	border-radius: 100px;
 	margin: 0 5px 4px;
 }
-
