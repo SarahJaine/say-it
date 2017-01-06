@@ -13,8 +13,8 @@
 // @include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-close-button;
-// @include foundation-menu;
-// @include foundation-menu-icon;
+@include foundation-menu;
+@include foundation-menu-icon;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
 // @include foundation-dropdown-menu;
@@ -32,9 +32,9 @@
 // @include foundation-table;
 // @include foundation-tabs;
 // @include foundation-thumbnail;
-// @include foundation-title-bar;
+@include foundation-title-bar;
 // @include foundation-tooltip;
-// @include foundation-top-bar;
+@include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-flex-classes;
@@ -42,4 +42,3 @@
 // say it custom //
 @import 'base/base';
 @import 'components/components';
-@import 'components/typography';

@@ -6,6 +6,15 @@ section {
 	margin: 2rem 0;
 }
 
+.hide-small {
+	@include breakpoint(small) {
+		display: none;
+	}
+	@include breakpoint(medium) {
+		display: initial;
+	}
+}
+
 .visually-hidden {
 	position: absolute;
 	overflow: hidden;

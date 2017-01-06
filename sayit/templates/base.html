@@ -35,31 +35,7 @@
 
     </head>
     <body>
-        <nav class="nav__bar">
-            <div class="row align-center">
-                <div class="small-10 columns">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="{% url 'home' %}">
-                                <div id="record">
-                                    <div id="record4">
-                                        <div id="record3">
-                                            <div id="record2">
-                                                <div id="record1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li><a href="{% url 'order' %}">Order Form</a></li>
-                        <li><a href="{% url 'musicians' %}">Musicians</a></li>
-                        <li><a href="{% url 'how' %}">How it Works</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        {% include 'partials/topbar.html' %}
         <main>
             <div class="row align-center">
                 <div class="small-10 columns">

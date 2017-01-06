@@ -1,0 +1,58 @@
+.no-js {
+	@include breakpoint(small only) {
+		.top-bar {
+			display: none;
+		}
+	}
+	@include breakpoint(medium) {
+		.title-bar {
+			display: none;
+		}
+	}
+}
+
+.nav {
+	background-color: $pink;
+	margin-bottom: 1rem;
+	.menu-icon {
+		position: absolute;
+		right: 2rem;
+		top: 3rem;
+	}
+}
+
+.nav__list {
+	li {
+		list-style: none;
+		padding: 1rem;
+		@extend %heading__medium;
+		a {
+			position: relative;
+			color: $record;
+		}
+		@include breakpoint(medium) {
+			a:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: $yellow;
+				visibility: hidden;
+				-webkit-transform: scaleX(0);
+				transform: scaleX(0);
+				-webkit-transition: all 0.3s ease-in-out 0s;
+				transition: all 0.3s ease-in-out 0s;
+			}
+			a:hover:before {
+			visibility: visible;
+			-webkit-transform: scaleX(1);
+			transform: scaleX(1);
+			}
+		}
+		a:hover {
+			color: $yellow;
+		}
+	}
+}

@@ -419,7 +419,7 @@ $header-color: $gun;
 
 // $menu-margin: 0;
 // $menu-margin-nested: 1rem;
-// $menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0.7rem 0;
 // $menu-item-color-active: $white;
 // $menu-item-background-active: map-get($foundation-palette, primary);
 // $menu-icon-spacing: 0.25rem;
@@ -575,13 +575,13 @@ $header-color: $gun;
 // // 34. Title Bar
 // // -------------
 
-// $titlebar-background: $black;
+$titlebar-background: $pink;
 // $titlebar-color: $white;
-// $titlebar-padding: 0.5rem;
+$titlebar-padding: 1rem;
 // $titlebar-text-font-weight: bold;
 // $titlebar-icon-color: $white;
 // $titlebar-icon-color-hover: $medium-gray;
-// $titlebar-icon-spacing: 0.25rem;
+// $titlebar-icon-spacing: 1rem;
 
 // // 35. Tooltip
 // // -----------
@@ -599,8 +599,8 @@ $header-color: $gun;
 // // 36. Top Bar
 // // -----------
 
-// $topbar-padding: 0.5rem;
-// $topbar-background: $light-gray;
+$topbar-padding: 1rem;
+$topbar-background: $titlebar-background;
 // $topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 1rem;
 // $topbar-input-width: 200px;
