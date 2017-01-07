@@ -39,6 +39,18 @@
         <main>
             <div class="row align-center">
                 <div class="small-10 columns">
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li id="message_{{ forloop.counter }}"
+                                  {% if message.tags %} class="{{ message.tags }} messages__message"
+                                      {% endif %}>
+                                    {{ message }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
                     {% block content %}
                     {% endblock content %}
                 </div>

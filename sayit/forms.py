@@ -37,7 +37,6 @@ class OrderForm(UnstyledForm):
 		widget=forms.TextInput(
 			attrs={'placeholder': 'Birthday'}))
 	date = forms.DateField(label='Date of Occasion',
-		input_formats='%m/%d/%Y',
 		widget=forms.DateInput(
 			attrs={'placeholder': '10/29/2017'}))
 	recipient = forms.CharField(label="Recipient's Name", max_length=50,
