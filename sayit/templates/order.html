@@ -3,27 +3,50 @@
 
 {% block content %}
 <section class="order">
-    <h1>Start Your Order</h1>
-	<div class="row">
-	    <div class="small-12 medium-6 columns">
-	    	<h2>Order Form</h2>
-	    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique suscipit doloribus veritatis delectus repellendus a fugiat commodi eos assumenda, repellat adipisci, harum possimus sint. Placeat, et asperiores magni? Autem, dolorum.</p>
-	        <form action="" method="post">
-	            {% csrf_token %}
-	            {% for each_field in form %}
-	                {{ each_field.errors }}
-	                {{ each_field.label_tag }}
-	                {{ each_field }}
-	            {% endfor %}
-	            <input type="submit" value="Submit" />
-	        </form>
-	    </div>
+	<div class="row align-center">
+        <div class="small-10 columns">
+		    <h1 class="heading__jumbo">Start Your Order</h1>
+			<div class="row">
+			    <div class="small-12 medium-7 columns">
+			    	<div class="wallpaper__record card-order">
+				    	<h2 class="heading__large-orderform">Order Form</h2>
+				    	<p>Complete this order form to kickstart the songwriting process! A musician will contact you within 48 hours.  The entire process takes up to 4 weeks.</p>
+				        <form action="" method="post">
+				            {% csrf_token %}
+				            {% for each_field in form %}
+				                {{ each_field.errors }}
+				                {{ each_field.label_tag }}
+				                {{ each_field }}
+				            {% endfor %}
+				            <input type="submit" value="Submit" />
+				        </form>
+				    </div>
+			    </div>
 
-	    <div class="small-12 medium-6 columns">
-	    	<h2>Contact Us</h2>
-	    	<p></p>
-	    	<a href=""></a>
-	    </div>
-	</div>
+			    <div class="small-12 medium-5 columns">
+			    	<div class="card">
+				    	<h2 class="heading__large">Contact Us</h2>
+				    	<p>Not quite ready to order? Have a burning question? Feel free to drop us an email. We're always happy to chat.</p>
+				    	<ul class="fa-ul contact__list">
+				    		<li>
+				    			<a href="mailto:order@sayitwithasong.co" target="_blank" class="block--align-right">
+				    				<i class="fa-li fa fa-envelope-square fa-2x fa-fw" aria-hidden="true"></i>
+				    				<p class="visually-hidden">Send me an email</p>
+				    				rachel@sayitwithasong.co
+				    			</a>
+				    		</li>
+				    		<li>
+				    			<a href="https://www.youtube.com/channel/UCDADOFKaPV1L6xJFIcRmytg" target="_blank" class="block--align-right">
+				    				<i class="fa-li fa fa-youtube fa-2x fa-fw" aria-hidden="true"></i>
+				    				<p class="visually-hidden">You Tube</p>
+				    				Check out more music
+				    			</a>
+				    		</li>
+				    	</ul>
+				    </div>
+			    </div> <!-- end contact col -->
+			</div><!--  end sub row -->
+		</div> <!-- end main col -->
+	</div> <!-- end main row -->
 </section>
 {% endblock content %}

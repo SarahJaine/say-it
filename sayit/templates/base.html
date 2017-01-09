@@ -32,13 +32,14 @@
         <script src="{% static 'js/bundle.js' %}" async defer></script>
         <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Martel:300,400,600,900|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,900|Open+Sans" rel="stylesheet">
 
     </head>
     <body>
         {% include 'partials/topbar.html' %}
         <main>
             <div class="row align-center">
-                <div class="small-10 columns">
+                <div class="small-12 columns">
                     {% if messages %}
                         <ul class="messages">
                             {% for message in messages %}
@@ -56,12 +57,6 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <a href="{% url 'home' %}" class="block--align-left">Home</a>
-            <a href="mailto:order@sayitwithasong.co" target="_blank" class="block--align-right"><p class="visually-hidden">Send me an Email</p><i class="fa fa-envelope-square fa-lg fa-fw" aria-hidden="true"></i></a>
-            <a href="" target="_blank" class="block--align-right"><p class="visually-hidden">Facebook</p><i class="fa fa-facebook fa-lg fa-fw" aria-hidden="true"></i></a>
-            <a href="" target="_blank" class="block--align-right"><p class="visually-hidden">YouTube Channel</p><i class="fa fa-youtube fa-lg fa-fw" aria-hidden="true"></i></a>
-        </footer>
 
         {# Structured Data for Logo and Social Profile Links #}
         <script type="application/ld+json">

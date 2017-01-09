@@ -56,20 +56,30 @@ $record: #332200;
 $sea: #55C1DD;
 $gun: #2D3047;
 
+$purple: #9068BE;
+$blue: #6ED3CF;
+$red: #f86759;
+$pink: #FFC6D9;
+$dark-gray: #404D4F;
+$medium-gray: #879B9E;
+$light-gray: #ECF8F8;
+
 $success-bg: #6EEB83;
 $success-text: #1D3F23;
 $error-bg: #EA8F6E;
 $error-text: #3F1000;
 
-$color-accent-1: $red;
-$color-accent-2: $blue;
-$color-accent-3: $yellow;
+$bg-1: $blue;
+$bg-2: $purple;
+$accent-1: $red;
+$accent-2: $pink;
 
 // i. Say It Typography
 $font-weight-light: 300;
 $font-weight-medium: 400;
 $font-weight-bold: 600;
 $font-weight-heavy: 900;
+
 // // 1. Global
 // // ---------
 
@@ -86,11 +96,10 @@ $font-weight-heavy: 900;
 // $light-gray: #e6e6e6;
 // $medium-gray: #cacaca;
 // $dark-gray: #8a8a8a;
-// $black: #0a0a0a;
-$white: #fefefe;
-// $white: #EAF3F7;
-$body-background: $white;
-$body-font-color: $record;
+$black: #293132;
+$white: #FFFFFF;
+$body-background: $light-gray;
+$body-font-color: $black;
 $body-font-family: 'Open Sans', sans-serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
@@ -131,7 +140,7 @@ $body-font-family: 'Open Sans', sans-serif;
 // // 4. Base Typography
 // // ------------------
 
-$header-font-family: 'Martel', serif;
+$header-font-family: 'Raleway', sans-serif;
 $header-font-weight: $font-weight-medium;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -171,7 +180,7 @@ $header-sizes: (
         'h6': 16,
     ),
 );
-$header-color: $gun;
+$header-color: $black;
 // $header-lineheight: 1.4;
 // $header-margin-bottom: 0.5rem;
 // $header-text-rendering: optimizeLegibility;
@@ -581,12 +590,12 @@ $menu-item-padding: 0.7rem 0;
 // // 34. Title Bar
 // // -------------
 
-$titlebar-background: $pink;
+$titlebar-background: $dark-gray;
 // $titlebar-color: $white;
 $titlebar-padding: 1rem;
 // $titlebar-text-font-weight: bold;
 // $titlebar-icon-color: $white;
-// $titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color-hover: $blue;
 // $titlebar-icon-spacing: 1rem;
 
 // // 35. Tooltip

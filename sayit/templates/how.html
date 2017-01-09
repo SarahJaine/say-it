@@ -3,36 +3,53 @@
 
 {% block content %}
 <section class="how">
-	<h1>How It Works</h1>
-    <div class="row">
-		<div class="small-12 medium-6 columns">
-            <div class="box-step">
-                <span class="circle">1</span>
-                <h2 class="step__title">Order Form</h2>
-                <p class="step__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, laboriosam totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="row align-center">
+        <div class="small-10 columns">
+        	<h1 class="heading__jumbo">How It Works</h1>
+            <div class="row">
+        		<div class="small-12 medium-6 columns">
+                    <div class="box-how wallpaper__guitar">
+                        <div class="how__number">1.</div>
+                        <div class="how__text">
+                            <h2 class="heading__large">Order Form</h2>
+                            <p class="heading__sub">"Hello, I’d like to create a song for my wife to celebrate our wedding anniversary next month."</p>
+                            <p>Kickstart the songwriting process by completeing the online <a href="{% url 'order' %}">order form</a>.  This is where you give us the basics: who the song is for, when it is needed by, and what occasion you're celebrating.</p>
+                        </div>
+                    </div>
+        		</div>
+                <div class="small-12 medium-6 columns">
+                    <div class="box-how wallpaper__guitar">
+                        <div class="how__number">2.</div>
+                        <div class="how__text">
+                            <h2 class="heading__large">Email from Musician</h2>
+                            <p class="heading__sub">"Great! Please answer these 10 questions about you and your wife."</p>
+                            <p>We email you a short questionnaire to help us get to know you. The more details you give, the better the song will be!</p>
+                            <p>If you ordered a photo slideshow you will be asked to send 20 photos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <div class="box-how wallpaper__guitar">
+                        <div class="how__number">3.</div>
+                        <div class="how__text">
+                            <h2 class="heading__large">Draft and Feedback</h2>
+                            <p class="heading__sub">"Here is a draft song. How can we improve it?"</p>
+                            <p>We email you a draft song and ask for your feedback. We want to make sure you are happy, so tell us what you think!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <div class="box-how wallpaper__guitar">
+                        <div class="how__number">4.</div>
+                        <div class="how__text">
+                            <h2 class="heading__large">Final Product</h2>
+                            <p class="heading__sub">"Here's your special anniversary song for your wife!"</p>
+                            <p>We email you the final products.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-		</div>
-		<div class="small-12 medium-6 columns">
-            <div class="box-step">
-                <span class="circle">2</span>
-    			<h2 class="step__title">Email from Musician</h2>
-                <p class="step__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, laboriosam totam molestias, soluta eligendi itaque tempora facilis deleniti id quidem ab possimus ratione quaerat modi esse atque, sapiente repellat sint!</p>
-            </div>
-		</div>
-		<div class="small-12 medium-6 columns">
-            <div class="box-step">
-                <span class="circle">3</span>
-    			<h2 class="step__title">Draft and Feedback</h2>
-                <p class="step__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, laboriosam totam molestias, soluta eligendi itaque tempora facilis deleniti id quidem ab possimus ratione quaerat modi esse atque, sapiente repellat sint!</p>
-            </div>
-		</div>
-		<div class="small-12 medium-6 columns">
-            <div class="box-step">
-                <span class="circle">4</span>
-    			<h2 class="step__title">Final Product</h2>
-                <p class="step__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, laboriosam totam molestias, soluta eligendi itaque tempora facilis deleniti id quidem ab possimus ratione quaerat modi esse atque, sapiente repellat sint!</p>
-            </div>
-		</div>
+        </div>
     </div>
 </section>
 {% endblock content %}

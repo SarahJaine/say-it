@@ -3,19 +3,26 @@
 
 {% block content %}
 <section class="musicians">
-	<h1>Meet the Musicians</h1>
-	<div class="row">
-		{% for musician in musicians %}
-			{% if musician.status == 'p' %}
-    		<div class="small-12 medium-8 large-4 columns">  
-    			<div class="box-musician">
-					<h2 class="heading__large">{{ musician.name }} <div id="circle-tiny"></div> {{ musician.position }}</h2>
-					<p class="heading__sub">{{ musician.musical_styles }}</p>
-					<p>{{ musician.bio }} <a href="{{ musician.profile_url }}" target="_blank">Check out my music</a>.</p>
-				</div>
-    		</div>
-    		{% endif %}
-		{% endfor %}
+	<div class="row align-center">
+        <div class="small-10 columns">
+			<h1 class="heading__jumbo">Meet the Musicians</h1>
+			<div class="row">
+				{% for musician in musicians %}
+					{% if musician.status == 'p' %}
+		    		<div class="small-12 medium-8 large-4 columns ">  
+		    			<div class="box-musician wallpaper__clef">
+		    				<div class="media-musician">
+		    				</div>
+		    				<br>
+							<h2 class="heading__medium-musician">{{ musician.name }} <div class="circle-tiny"></div> {{ musician.position }}</h2>
+							<p class="heading__sub">{{ musician.musical_styles }}</p>
+							<p>{{ musician.bio }} <a href="{{ musician.profile_url }}" target="_blank">Check out my music</a>.</p>
+						</div>
+		    		</div>
+		    		{% endif %}
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 </section>
 {% endblock content %}

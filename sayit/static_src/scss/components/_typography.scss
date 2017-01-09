@@ -1,34 +1,44 @@
 %heading__jumbo,
 .heading__jumbo {
-	font-weight: $font-weight-bold;
-	font-size: 1.6rem;
+	font-size: 2rem;
+	letter-spacing: 1px;
 	@include breakpoint(medium) {
-		font-size: 1.8rem;
+		font-size: 2.4rem;
 	}
 	@include breakpoint(large) {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 }
 
 %heading__large,
 .heading__large {
 	font-weight: $font-weight-bold;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
 	@include breakpoint(medium) {
-		font-size: 1.3rem;
+		font-size: 1.6rem;
 	}
 	@include breakpoint(large) {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 }
 
 %heading__medium,
 .heading__medium {
-	font-weight: $font-weight-bold;
-	font-size: 0.8rem;
+	font-family: $body-font-family;
+	font-size: 1.2rem;
 	@include breakpoint(medium) {
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
+	@include breakpoint(large) {
+		font-size: 1.4rem;
+	}
+}
+
+%heading__small,
+.heading__small {
+	font-weight: $font-weight-bold;
+	font-size: 1rem;
 	@include breakpoint(large) {
 		font-size: 1.2rem;
 	}
@@ -40,4 +50,26 @@
     font-style: italic;
     opacity: 0.8;
     margin: 0 0 0.5rem 0;
+}
+
+.heading__jumbo-about {
+	@extend %heading__jumbo;
+	font-family: 'Martel', 'serif';
+	font-weight: $font-weight-bold;
+}
+
+.heading__jumbo-example {
+	@extend %heading__jumbo;
+	color: $white;
+	font-weight: $font-weight-bold;
+}
+
+.heading__large-orderform {
+	@extend %heading__large;
+	color: $white;
+}
+
+.heading__medium-musician {
+	@extend %heading__medium;
+	font-weight: $font-weight-bold;
 }

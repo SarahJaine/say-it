@@ -3,31 +3,43 @@
 
 {% block content %}
 <section class="about">
-    <h1>Say It With a Song</h1>
-	<div class="row">
-		<div class="small-12 medium-8 columns">
-			<p>Whether you are celebrating a wedding, new baby, anniversary, birthday or any other special occasion, Say It With a Song is here to help you celebrate with style! We compose and record original songs tailored to your special event. Your special song can be created in any music style you like, and the lyrics can be in English, Spanish or French.</p>
-            <p>Additionally, we offer photo slideshows to accompany your song. This audio and visual display creates a special centerpiece for an unforgettable event.</p>
-		</div>
-		<div class="small-12 medium-4 columns">
-			<video src=""></video>
-		</div>
+    <div class="row align-center">
+        <div class="small-10 columns">
+        	<div class="row">
+        		<div class="small-12 medium-8 columns">
+                    <h1 class="heading__jumbo-about">Say It With a Song</h1>
+        			<p>Whether you are celebrating a wedding, new baby, anniversary, birthday or any other special occasion, Say It With a Song is here to help you celebrate with style! We compose and record original songs tailored to your special event. Your special song can be created in any music style you like, and the lyrics can be in English, Spanish or French.</p>
+                    <p>Additionally, we offer photo slideshows to accompany your song. This audio and visual display creates a special centerpiece for an unforgettable event.</p>
+        		</div>
+        		<div class="small-12 medium-4 columns">
+        			<div class="media-about">
+                    </div>
+        		</div>
+            </div>
+        </div>
     </div>
 </section>
-<section class="examples">
-    <h2>Examples</h2>
-    <div class="row">
-        {% for example in examples %}
-            {% if example.status == 'p' %}
-            <div class="small-12 medium-6 large-4 columns">
-                <div class="box-example">
-                    <h3>{{ example.title }}</h3>
-                    <p class="heading__sub">{{ example.product_type }}</p>
-                    <p>{{ example.review }}</p>
-                </div>
+<section class="wallpaper__note">
+    <div class="row align-center">
+        <div class="small-10 columns">
+            <h2 class="heading__jumbo-example">Examples</h2>
+            <div class="row">
+                {% for example in examples %}
+                    {% if example.status == 'p' %}
+                    <div class="small-12 medium-6 large-4 columns">
+                        <div class="box-example">
+                            <div class="media-example">
+                            </div>
+                            <br>
+                            <h3 class="heading__medium">{{ example.title }}</h3>
+                            <p class="heading__sub">{{ example.product_type }}</p>
+                            <p>{{ example.review }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
             </div>
-            {% endif %}
-        {% endfor %}
+        </div>
     </div>
 </section>
 {% endblock content %}
