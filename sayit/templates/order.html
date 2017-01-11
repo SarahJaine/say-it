@@ -14,11 +14,12 @@
 				        <form action="" method="post">
 				            {% csrf_token %}
 				            {% for each_field in form %}
-				                {{ each_field.errors }}
-				                {{ each_field.label_tag }}
-				                {{ each_field }}
+			                	{{ each_field.errors }}
+			                	{{ each_field.label_tag }}
+			                	{{ each_field }}
+
 				            {% endfor %}
-				            <input type="submit" value="Submit" />
+				            <input type="submit" value="Submit" id="submit" />
 				        </form>
 				    </div>
 			    </div>
