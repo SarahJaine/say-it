@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import 'foundation'
 import 'foundation-mediaquery'
+import 'foundation-responsivemenu'
 import 'foundation-responsivetoggle'
 import 'intl-tel-input'
 

@@ -51,7 +51,9 @@
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "foundation": "./node_modules/foundation-sites/js/foundation.core.js",
     "foundation-mediaquery": "./node_modules/foundation-sites/js/foundation.util.mediaQuery.js",
-    "foundation-responsivetoggle": "./node_modules/foundation-sites/js/foundation.responsiveToggle.js"
+    "foundation-responsivetoggle": "./node_modules/foundation-sites/js/foundation.responsiveToggle.js",
+    "foundation-responsivemenu": "./node_modules/foundation-sites/js/foundation.responsiveMenu.js",
+    "foundation-triggers": "./node_modules/foundation-sites/js/foundation.util.triggers.js"
   },
   "browserify-shim": {
     "jquery": "$",

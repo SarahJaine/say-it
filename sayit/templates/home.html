@@ -4,7 +4,7 @@
 {% block content %}
 <section class="about">
     <div class="row align-center">
-        <div class="small-10 columns">
+        <div class="small-12 medium-11 large-10 columns">
         	<div class="row">
         		<div class="small-12 medium-8 columns">
                     <h1 class="heading__jumbo-about">Say It With a Song</h1>
@@ -16,12 +16,12 @@
                     </div>
         		</div>
             </div>
-        </div>
-    </div>
+        </div> <!-- end main col 1 -->
+    </div> <!-- end main row 1 -->
 </section>
 <section class="wallpaper__note">
     <div class="row align-center">
-        <div class="small-10 columns">
+        <div class="small-12 medium-11 large-10 columns">
             <h2 class="heading__jumbo-example">Examples</h2>
             <div class="row">
                 {% for example in examples %}
@@ -39,7 +39,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
-        </div>
-    </div>
+        </div> <!-- end main col 2 -->
+    </div> <!-- end main row 2 -->
 </section>
 {% endblock content %}

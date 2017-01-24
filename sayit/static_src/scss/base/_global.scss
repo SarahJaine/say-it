@@ -3,8 +3,18 @@ main {
 }
 
 section {
-	margin: 2rem 0 3rem;
-	padding: 3rem 0rem;
+	@include breakpoint(small) {
+		margin: 0.5rem 0 1rem;
+		padding: 1rem 0rem;
+	}
+	@include breakpoint(medium) {
+		margin: 1rem 0 2rem;
+		padding: 2rem 0rem;
+	}
+	@include breakpoint(large) {
+		margin: 2rem 0 3rem;
+		padding: 3rem 0rem;
+	}
 }
 
 input {
@@ -12,11 +22,8 @@ input {
 }
 
 .hide-small {
-	@include breakpoint(small) {
+	@include breakpoint(small only) {
 		display: none;
-	}
-	@include breakpoint(medium) {
-		display: initial;
 	}
 }
 

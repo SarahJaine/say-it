@@ -14,12 +14,17 @@
 .nav {
 	background-color: $dark-gray;
 	margin-bottom: 1rem;
+	// position: relative;
+	.title-bar {
+		padding: 0 0 10px 0;
+	}
 	.menu-icon {
 		position: absolute;
-		right: 2rem;
-		top: 3rem;
+		right: 40px;
+		top: 35px;
 	}
 }
+
 
 %effects-hoverline,
 .effects-hoverline {
@@ -33,14 +38,11 @@
 			left: 0;
 			background-color: $blue;
 			visibility: hidden;
-			-webkit-transform: scaleX(0);
 			transform: scaleX(0);
-			-webkit-transition: all 0.3s ease-in-out 0s;
 			transition: all 0.3s ease-in-out 0s;
 		}
 		a:hover:before {
 			visibility: visible;
-			-webkit-transform: scaleX(1);
 			transform: scaleX(1);
 		}
 		a:hover {
