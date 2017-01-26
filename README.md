@@ -107,7 +107,25 @@ You are **highly encouraged** to do this before finishing features to make sure 
 | SSLIFY_DISABLE | disables SSL check when `True` |
 
 
-## Deploying on Heroku- from CLI
+## Deploying on Heroku
+
+
+### Create App
+
+Add app in [application interface](https://dashboard.heroku.com/apps).
+
+### Link github
+
+```
+heroku login
+```
+Enter your login credentials.
+
+Add Heroku remote.
+
+```
+git remote add heroku git@heroku.com:say-it-with-a-song.git
+```
 
 ### Add Buildpacks
 
@@ -122,39 +140,15 @@ heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-nodej
 For more information, see Heroku's [multiple buildpack guide](
 https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
 
-
-## Deploying on Heroku- from application interface
-
-### Create App
-
-Add app in [application interface](https://dashboard.heroku.com/apps)
-
-### Link github
-
-```
-heroku login
-```
-Type in login credentials
-
-```
-git remote add heroku git@heroku.com:say-it-with-a-song.git
-```
-
-### Add Buildpacks by Building
-
-Alternatively, link to deployment method to github (autodeploy from branch.) Buildpacks are automatically detected during build.
-
-
 ### Database
 
-Add free tier of postgresql database
+Add free tier of postgresql database.
 
 ```
 heroku addons:create heroku-postgresql:hobby-dev
 
 ```
 In application, [check URI](https://data.heroku.com/). Add DATABASE_URL variable with URI value to configuration.
-
 
 ### HTTPS
 
@@ -171,5 +165,3 @@ Follow the
 to upload the custom cert and finish configuration.
 
 ## Operational Notes
-
-
