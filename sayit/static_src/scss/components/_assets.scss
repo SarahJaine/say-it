@@ -53,7 +53,8 @@
 .media-about {
 	@extend %media;
 	height: 100%;
-	border-color: $red;
+	// border-color: $red;
+	border-color: $body-background;
 }
 
 .media-musician {

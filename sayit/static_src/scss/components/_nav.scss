@@ -12,9 +12,8 @@
 }
 
 .nav {
-	background-color: $dark-gray;
+	background-color: gray;
 	margin-bottom: 1rem;
-	// position: relative;
 	.title-bar {
 		padding: 0 0 10px 0;
 	}
@@ -70,5 +69,15 @@
 		@include breakpoint(medium) {
 			padding-right: 0;
 		}
+	}
+}
+
+// Logo
+#logo {
+	width: 90px;
+	margin: 10px 0 0 0;
+	@include breakpoint(large) {
+		width: 130px;
+		margin: 0;
 	}
 }

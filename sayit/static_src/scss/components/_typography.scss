@@ -73,3 +73,8 @@
 	@extend %heading__medium;
 	font-weight: $font-weight-bold;
 }
+
+.heading__logo {
+	@extend %heading__small;
+	font-family: 'Martel', 'serif';
+}

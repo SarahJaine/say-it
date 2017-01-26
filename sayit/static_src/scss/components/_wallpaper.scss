@@ -6,25 +6,25 @@
 .wallpaper__note {
 	@extend %wallpaper;
 	background-color: $purple;
-	background-image: url(../note_scatter.png);
+	background-image: url(../img/note_scatter.png);
 	padding: 1.5rem 1rem;
 }
 
 .wallpaper__record {
 	@extend %wallpaper;
 	background-color: $red;
-	background-image: url(../record_scatter.png);
+	background-image: url(../img/record_scatter.png);
 }
 
 %wallpaper__guitar,
 .wallpaper__guitar {
 	@extend %wallpaper;
 	background-color: $blue;
-	background-image: url(../guitar_scatter.png);
+	background-image: url(../img/guitar_scatter.png);
 }
 
 .wallpaper__clef {
 	@extend %wallpaper;
 	background-color: $medium-gray;
-	background-image: url(../clef_scatter.png);
+	background-image: url(../img/clef_scatter.png);
 }

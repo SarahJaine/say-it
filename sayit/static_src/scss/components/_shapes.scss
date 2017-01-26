@@ -6,51 +6,6 @@
 	margin: 0 5px 4px;
 }
 
-
-
-// Records
-#record {
-	position: relative;
-	height: 70px;
-	width: 70px;
-}
-
-%records {
-	border-radius: 100px;
-	border: 2px solid $light-gray;
-	position: absolute;
-	top: 1px;
-	left: 1px;
-}
-
-#record1 {
-	@extend %records;
-	border-width: 4px;
-	height: 26px;
-	width: 26px;
-}
-
-#record2 {
-	@extend %records;
-	height: 32px;
-	width: 32px;
-}
-
-#record3 {
-	@extend %records;
-	height: 38px;
-	width: 38px;
-}
-
-#record4 {
-	@extend %records;
-	border-width: 3px;
-	top: 18px;
-	left: 20px;
-	height: 46px;
-	width: 46px;
-}
-
 // Boxes
 %box {
 	border-radius: 10px;
