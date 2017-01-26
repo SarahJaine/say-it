@@ -83,7 +83,6 @@ foreman start -f Procfile.dev web
 ```
 
 
-
 ### Procfile
 
 When deployed to production or staging, the application and any other processes will be run as defined in the Procfile. You can run this file locally using [foreman](http://ddollar.github.io/foreman/) to launch the application the same way it will be run in production:
