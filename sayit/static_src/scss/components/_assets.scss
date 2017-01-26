@@ -58,8 +58,8 @@
 }
 
 .media-musician {
-	@extend %media;
-	border-color: $purple;
+	border: 5px solid $purple;
+	border-radius: 100%;
 }
 
 // Other

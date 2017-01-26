@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'sayit',
+    'storages',
 )
 
 MIDDLEWARE = [
@@ -118,6 +119,25 @@ SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = SECURE_SSL_REDIRECT
 CSRF_COOKIE_SECURE = SECURE_SSL_REDIRECT
+
+# Storage
+
+MEDIA_URL = config('MEDIA_URL', default='/media/')
+
+# .5MB - 524288, 1MB - 1048576, 5MB - 5242880, 10MB - 10485760
+MEDIA_MAX_UPLOAD_SIZE = 10485760
+MEDIA_MAX_UPLOAD_SIZE_DISPLAY = '10MB'
+MEDIA_ALLOWED_FILETYPES = ['GIF', 'JPEG', 'JPG', 'MPO', 'PDF', 'PNG']
+
+if config('USE_S3', cast=bool, default=True):
+
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    AWS_QUERYSTRING_AUTH = False
+    AWS_HEADERS = {
+        'Cache-Control': 'max-age=604800',
+    }
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # Sentry
 

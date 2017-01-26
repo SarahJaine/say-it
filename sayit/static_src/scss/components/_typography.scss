@@ -72,6 +72,8 @@
 .heading__medium-musician {
 	@extend %heading__medium;
 	font-weight: $font-weight-bold;
+	margin: 1rem 0 0.5rem 0;
+	text-align: center;
 }
 
 .heading__logo {

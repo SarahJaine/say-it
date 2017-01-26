@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
@@ -13,7 +14,7 @@
         		</div>
         		<div class="small-12 medium-4 columns">
         			<div class="media-about">
-                        <img src="{% static 'img/music_splash_lg.png' %}">
+                        <img src="{% static 'img/music_splash_lg.png' %}" alt="abstract drawing of vinyl record">
                     </div>
         		</div>
             </div>

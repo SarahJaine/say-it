@@ -11,9 +11,9 @@
 					{% if musician.status == 'p' %}
 		    		<div class="small-12 large-4 columns ">  
 		    			<div class="box-musician wallpaper__clef">
-		    				<div class="media-musician">
-		    				</div>
-		    				<br>
+		    				{% if musician.image %}
+		    					<img src="{{ musician.image.url }}" alt="photo of {{ musician.name }}" class="media-musician">
+		    				{% endif %}
 							<h2 class="heading__medium-musician">{{ musician.name }} <div class="circle-tiny"></div> {{ musician.position }}</h2>
 							<p class="heading__sub">{{ musician.musical_styles }}</p>
 							<p>{{ musician.bio }} <a href="{{ musician.profile_url }}" target="_blank">Check out my music</a>.</p>
