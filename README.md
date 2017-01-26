@@ -127,8 +127,11 @@ https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
 
 ### Database
 
+Add free tier of postgresql database
+
 ```
-heroku addons:create heroku-postgresql:hobby-basic
+heroku addons:create heroku-postgresql:hobby-dev
+
 ```
 
 
