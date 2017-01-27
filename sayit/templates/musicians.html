@@ -9,14 +9,15 @@
 			<div class="row">
 				{% for musician in musicians %}
 					{% if musician.status == 'p' %}
-		    		<div class="small-12 large-4 columns ">  
+		    		<div class="small-12 medium-6 large-4 columns ">  
 		    			<div class="box-musician wallpaper__clef">
 		    				{% if musician.image %}
 		    					<img src="{{ musician.image.url }}" alt="photo of {{ musician.name }}" class="media-musician">
 		    				{% endif %}
 							<h2 class="heading__medium-musician">{{ musician.name }} <div class="circle-tiny"></div> {{ musician.position }}</h2>
-							<p class="heading__sub">{{ musician.musical_styles }}</p>
-							<p>{{ musician.bio }} <a href="{{ musician.profile_url }}" target="_blank">Check out my music</a>.</p>
+							<p class="heading__sub-musician">{{ musician.musical_styles }}</p>
+							<p>{{ musician.bio }}</p>
+							<p><a href="{{ musician.profile_url }}" target="_blank">Check out my music.</a></p>
 						</div>
 		    		</div>
 		    		{% endif %}

@@ -44,6 +44,7 @@
 	}
 }
 
+%heading__sub,
 .heading__sub {
     font-weight: $font-weight-light;
     font-size: 0.9rem;
@@ -91,6 +92,11 @@
 	@extend %heading__medium;
 	font-weight: $font-weight-bold;
 	margin: 1rem 0 0.5rem 0;
+	text-align: center;
+}
+
+.heading__sub-musician {
+	@extend %heading__sub;
 	text-align: center;
 }
 
