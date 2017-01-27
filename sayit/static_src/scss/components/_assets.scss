@@ -41,19 +41,22 @@
 // Media
 %media {
 	width: 100%;
-	height: 100px;
+	height: 100%;
 	border: 5px solid $blue;
 }
 
 .media-example {
 	@extend %media;
-	border-color: $blue;
+	background-color: $blue;
+}
+
+.media__example-audio {
+	width: 100%;
 }
 
 .media-about {
 	@extend %media;
 	height: 100%;
-	// border-color: $red;
 	border-color: $body-background;
 }
 

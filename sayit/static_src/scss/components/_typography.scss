@@ -69,6 +69,11 @@
 	color: $white;
 }
 
+.heading__medium-example {
+	@extend %heading__medium;
+	margin: 1rem 0 0.5rem 0;
+}
+
 .heading__medium-musician {
 	@extend %heading__medium;
 	font-weight: $font-weight-bold;

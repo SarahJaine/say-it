@@ -5,6 +5,9 @@ class Example(models.Model):
 	title = models.CharField(max_length=80)
 	product_type = models.CharField(max_length=100)
 	review = models.TextField(max_length=500, unique=True)
+	media_link = models.URLField(blank=True, null=True, max_length=100)
+	audio_image = models.ImageField(blank=True, null=True, upload_to='examples/')
+	media = models.FileField(blank=True, null=True, upload_to='examples/')
 	order = models.IntegerField(default=0)
 	STATUS_CHOICES = (
 		('d', 'Draft'),

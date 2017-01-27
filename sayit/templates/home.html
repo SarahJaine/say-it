@@ -30,10 +30,18 @@
                     {% if example.status == 'p' %}
                     <div class="small-12 medium-6 large-4 columns">
                         <div class="box-example">
-                            <div class="media-example">
-                            </div>
-                            <br>
-                            <h3 class="heading__medium">{{ example.title }}</h3>
+                            {% if example.media %}
+                                <div class="media-example">
+                                    <img src="{{ example.audio_image.url }}" alt="decorative image for {{ example.title }}">
+                                    <audio controls class="media__example-audio">
+                                        <source src="{{ example.media.url }}" type="audio/mpeg">
+                                        Oh no! Your browser does not support the audio element. Try updating your browser.
+                                    </audio>
+                                </div>
+                            {% elif example.media_link %}
+                                <iframe src="https://www.youtube.com/embed/{{ example.media_link|cut:'https://youtu.be/' }}" frameborder="0" allowfullscreen class="media-example"></iframe>
+                            {% endif %}
+                            <h3 class="heading__medium-example">{{ example.title }}</h3>
                             <p class="heading__sub">{{ example.product_type }}</p>
                             <p>{{ example.review }}</p>
                         </div>
