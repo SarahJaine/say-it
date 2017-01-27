@@ -56,8 +56,14 @@
 
 .media-about {
 	@extend %media;
+	border: none;
 	height: 100%;
-	border-color: $body-background;
+	@include breakpoint(small only) {
+		padding: 1rem 4rem;
+	}
+	@include breakpoint(medium) {
+		margin: -4rem 0;		
+	}
 }
 
 .media-musician {
@@ -72,7 +78,6 @@
 		line-height: 3rem;
 		margin-left: 1.2rem;
 	}
-	
 	.fa {
 		a {
 			color: $body-font-color;
@@ -82,3 +87,12 @@
 		}
 	}
 }
+
+// #submit {
+// 	color: $body-font-color;
+// 	background-color: $white;
+// 	a:hover {
+// 		background-color: $blue;
+// 		color: $white;
+// 	}
+// }

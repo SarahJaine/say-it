@@ -3,17 +3,11 @@ main {
 }
 
 section {
-	@include breakpoint(small) {
+	margin: 1rem 0 2rem;
+	padding: 2rem 0rem;
+	@include breakpoint(small only) {
 		margin: 0.5rem 0 1rem;
 		padding: 1rem 0rem;
-	}
-	@include breakpoint(medium) {
-		margin: 1rem 0 2rem;
-		padding: 2rem 0rem;
-	}
-	@include breakpoint(large) {
-		margin: 2rem 0 3rem;
-		padding: 3rem 0rem;
 	}
 }
 

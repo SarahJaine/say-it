@@ -64,9 +64,22 @@
 	font-weight: $font-weight-bold;
 }
 
+.heading__jumbo-order {
+	@extend %heading__jumbo;
+	margin: 0 0 1rem 0;
+}
+
 .heading__large-orderform {
 	@extend %heading__large;
 	color: $white;
+}
+
+.heading__large-contactus {
+	@extend %heading__large;
+	margin: 2rem 0 0 0;
+	@include breakpoint(large) {
+		margin: 0;
+	}
 }
 
 .heading__medium-example {
