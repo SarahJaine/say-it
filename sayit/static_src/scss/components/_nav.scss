@@ -64,17 +64,21 @@
 			color: $blue;
 		}
 		@extend %effects-hoverline;
-	}
-	li:last-child {
-		@include breakpoint(medium) {
+		@include breakpoint(small only) {
 			padding-right: 0;
 		}
+	}
+	li:first-child {
+		padding-left: 0;
+	}
+	li:last-child {
+		padding-right: 0;
 	}
 }
 
 // Logo
 #logo {
-	width: 90px;
+	width: 80px;
 	margin: 10px 0 0 0;
 	@include breakpoint(large) {
 		width: 130px;
