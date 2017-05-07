@@ -31,4 +31,11 @@
 	@extend %box;
 	margin: 1.5rem 0 0 0;
 	background-color: $white;
+    // Anchor text is darker to maintain AA contrast with dark wallpaper
+    a {
+        color: $dark-blue-links;
+    }
+    a:hover {
+        color: scale-color($dark-blue-links, $lightness: -30%);
+    }
 }

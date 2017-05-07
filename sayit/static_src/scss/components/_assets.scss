@@ -37,7 +37,6 @@
 	}
 }
 
-
 // Media
 %media {
 	width: 100%;
@@ -47,7 +46,6 @@
 
 .media-example {
 	@extend %media;
-	background-color: $blue;
 }
 
 .media__example-audio {
@@ -62,12 +60,11 @@
 		padding: 1rem 4rem;
 	}
 	@include breakpoint(medium) {
-		margin: -4rem 0;		
+		margin: -4rem 0;
 	}
 }
 
 .media-musician {
-	border: 5px solid $purple;
 	border-radius: 100%;
 	align: center;
 }
@@ -88,12 +85,3 @@
 		}
 	}
 }
-
-// #submit {
-// 	color: $body-font-color;
-// 	background-color: $white;
-// 	a:hover {
-// 		background-color: $blue;
-// 		color: $white;
-// 	}
-// }
