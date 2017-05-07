@@ -17,13 +17,15 @@
 	.title-bar {
 		padding: 0 0 10px 0;
 	}
+    .home-icon {
+        padding-top: 20px;
+    }
 	.menu-icon {
 		position: absolute;
 		right: 40px;
 		top: 35px;
 	}
 }
-
 
 %effects-hoverline,
 .effects-hoverline {
@@ -50,22 +52,26 @@
 	}
 }
 
+.top-bar-left {
+    float: left;
+}
+
 .nav__list {
 	li {
-		text-align: right;
 		list-style: none;
 		padding: 1rem 1.5rem;
 		@extend %heading__small;
+        @extend %effects-hoverline;
 		a {
 			position: relative;
 			color: $white;
+            padding: $menu-item-padding;
 		}
 		a:hover {
 			color: $blue;
 		}
-		@extend %effects-hoverline;
 		@include breakpoint(small only) {
-			padding-right: 0;
+			padding: 1rem 0;
 		}
 	}
 	li:first-child {

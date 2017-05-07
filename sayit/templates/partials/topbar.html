@@ -4,17 +4,21 @@
 <nav class="nav no-js">
     <div class="row align-center">
         <div class="small-10 columns">
-            <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-                <a href="{% url 'home' %}">
-                    <img src="{% static 'img/logo.png' %}" id="logo">
-                </a>
-                <button class="menu-icon top-bar-right" type="button" data-toggle="example-menu"></button>
+            <div class="title-bar" data-responsive-toggle="sayit-menu" data-hide-for="medium">
+                <div class="top-bar-left">
+                    <ul class="nav__list menu">
+                        <li><a href="{% url 'home' %}" class="home-icon">Home</a></li>
+                    </ul>
+                </div>
+                <button class="menu-icon top-bar-right" type="button" data-toggle="sayit-menu"></button>
             </div>
 
-            <div class="top-bar" id="example-menu">
-                <a href="{% url 'home' %}" class="hide-small">
-                    <img src="{% static 'img/logo.png' %}" id="logo">
-                </a>
+            <div class="top-bar" id="sayit-menu">
+                <div class="top-bar-left hide-small">
+                    <ul class="nav__list menu">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                    </ul>
+                </div>
                 <div class="top-bar-right">
                     <ul class="dropdown menu vertical medium-horizontal nav__list" data-dropdown-menu>
                         <li><a href="{% url 'how' %}">How it Works</a></li>
