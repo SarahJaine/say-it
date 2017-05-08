@@ -1,9 +1,11 @@
 from __future__ import unicode_literals
 
+import os
 from textwrap import dedent
 
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
+from django.utils.timezone import datetime
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import FormView
 from sayit.models import Example, Musician
@@ -41,7 +43,7 @@ class MusiciansView(ListView):
 class OrderView(ActionMixin, FormView):
     template_name = 'order.html'
     form_class = OrderForm
-    success_url = "/order/"
+    success_url = '/order/'
 
     def post(self, request, *args, **kwargs):
         order_form = OrderForm(request.POST)
@@ -61,16 +63,28 @@ class OrderView(ActionMixin, FormView):
             message = order_form.cleaned_data['message']
             message = message.replace('\r\n', '\n                ')
 
-            recipient_list = ['orders@sayitwithasong.co']
+            sayit_email = os.environ['EMAIL_HOST_USER']
 
-            # Assemble body of message
+            # Construct email subject
+            today=str(datetime.today())
+            today_date=today[2:10].replace('-','')
+            today_sec=today[-9:-7]
+            invoice_number='{0}-{1}-{2}'.format(today_date,name[:2].upper(),today_sec)
+            subject = 'Say It With a Song Order #{0}'.format(invoice_number)
+
+            # Assemble plain text email body
+            text_welcome = '''\
+                Thanks for contacting Say It With a Song. \
+                We're excited to work with you!
+                We will be in touch within 48 hours. \
+                For your records, please see a copy of your order below.'''
             text_contact = '''\
                 Contact Information\n
                 Name: {0}
                 Email: {1}
                 Phone: {2}'''.format(name, email, phone)
-            text_order = '''\
-                Product Order Information\n
+            text_product = '''\
+                Order Information\n
                 Product: {0}
                 Language: {1}
                 Occasion: {2}
@@ -83,20 +97,35 @@ class OrderView(ActionMixin, FormView):
                               product_occasion, product_date,
                               product_recipient, product_relationship,
                               product_style, message)
-            text_content = '{0}\n\n{1}'.format(dedent(text_contact),
-                                               dedent(text_order))
+            text_closing = '''\
+                Sincerely yours,
+                Rachel Sparrow
+            '''
+            text_content_business = '{0}{1}'.format(
+                dedent(text_contact),
+                dedent(text_product)
+            )
+            text_content_customer = '{0}{1}{2}'.format(
+                dedent(text_welcome),
+                text_content_business,
+                dedent(text_closing)
+            )
 
-            # Assemble alternative HTML version of message
-            html_contact = '''\
-                <h1>Order from {0}</h1>
-                <h2>Contact Information</h2>
+            # Assemble HTML email body
+            html_welcome = '''
+                <p>Thanks for contacting Say It With a Song.
+                We're excited to work with you!
+                We will be in touch within 48 hours.<br>
+                For your records, please see a copy of your order below.</p>'''
+            html_contact = '''
+                <p>Contact Information</p>
                 <ul>
                     <li>Name: {0}</li>
                     <li>Email: {1}</li>
                     <li>Phone: {2}</li>
                 </ul>'''.format(name, email, phone)
-            html_order = '''\
-                <h2>Product Order Information</h2>
+            html_product = '''
+                <p>Order Information</p>
                 <ul>
                     <li>Product: {0}</li>
                     <li>Language: {1}</li>
@@ -110,24 +139,45 @@ class OrderView(ActionMixin, FormView):
                                 product_occasion, product_date,
                                 product_recipient, product_relationship,
                                 product_style, message)
-            html_content = '{0}\n\n{1}'.format(dedent(html_contact),
-                                               dedent(html_order))
+            html_closing = '''
+            <p>Sincerely yours,<br>
+            Rachel Sparrow</p>
+            '''
+            html_content_business = '{0}{1}'.format(
+                dedent(html_contact),
+                dedent(html_product)
+            )
+            html_content_customer = '{0}{1}{2}'.format(
+                dedent(html_welcome),
+                html_content_business,
+                dedent(html_closing)
+            )
 
-            # Create message
-            msg = EmailMultiAlternatives(
-                subject='Order from {0}'.format(
-                    name),
-                body='{0}\n\n{1}'.format(dedent(text_contact),
-                                         dedent(text_order)),
-                from_email=email,
-                to=recipient_list,
+            # Create email for business
+            msg_business = EmailMultiAlternatives(
+                subject=subject,
+                body=text_content_business,
+                from_email='{0} <{1}>'.format(name, email),
+                to=[sayit_email],
                 headers={'Reply-To': '{0} <{1}>'.format(
                     name, email)}
             )
-            msg.attach_alternative(html_content, "text/html")
+            msg_business.attach_alternative(html_content_business, 'text/html')
+
+            # Create messsage for customer
+            msg_customer = EmailMultiAlternatives(
+                subject=subject,
+                body=text_content_customer,
+                from_email='Say It With a Song <{0}>'.format(sayit_email),
+                to=[email],
+                headers={'Reply-To': '{0} <{1}>'.format(
+                    'Say It With a Song', sayit_email)}
+            )
+            msg_customer.attach_alternative(html_content_customer, 'text/html')
 
             try:
-                msg.send()
+                msg_business.send()
+                msg_customer.send()
                 self.add_message(
                     'Your order was sent!',
                     level=messages.SUCCESS)

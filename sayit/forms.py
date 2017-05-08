@@ -9,18 +9,18 @@ class UnstyledForm(forms.Form):
 
 class OrderForm(UnstyledForm):
 	PRODUCT_CHOICES = [
-		(2, 'Song and Slideshow'),
-		(1, 'Song only')
+		('Song and Slideshow', 'Song and Slideshow'),
+		('Song only', 'Song only')
 	]
 	LANG_CHOICES = [
-		('E', 'English'),
-		('F', 'French'),
-		('S', 'Spanish')
+		('English', 'English'),
+		('French', 'French'),
+		('Spanish', 'Spanish')
 	]
 	STYLE_CHOICES = [
-		('U', 'Upbeat pop'),
-		('B', 'Slow ballad'),
-		('O', 'Other')
+		('Upbeat pop', 'Upbeat pop'),
+		('Slow ballad', 'Slow ballad'),
+		('Other', 'Other')
 	]
 	name = forms.CharField(
 		max_length=50,
