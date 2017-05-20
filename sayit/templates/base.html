@@ -28,14 +28,12 @@
         <meta name="twitter:description" content="">
         <meta name="twitter:image" content="">
 
-        <!-- international phone -->
-        <link rel="stylesheet" href="/intlTelInput.css">
-
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
-        <script src="https://use.fontawesome.com/998d0f8dda.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Martel:300,400,600,900|Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,900|Open+Sans" rel="stylesheet">
 
+        <!-- international phone -->
+        <link rel="stylesheet" href="/intlTelInput.css">
     </head>
     <body>
         {% include 'partials/topbar.html' %}
@@ -61,6 +59,9 @@
         </main>
 
         {# Structured Data for Logo and Social Profile Links #}
+        <script src="{% static 'js/bundle.js' %}" async defer></script>
+        <script src="https://use.fontawesome.com/998d0f8dda.js" async defer></script>
+
         <script type="application/ld+json">
             {
                 "@context": "http://schema.org",
@@ -77,6 +78,6 @@
                 ]
             }
         </script>
-        <script src="{% static 'js/bundle.js' %}" async defer></script>
+
     </body>
 </html>
