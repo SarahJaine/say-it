@@ -59,10 +59,10 @@
         </main>
 
         {# Structured Data for Logo and Social Profile Links #}
-        <script src="{% static 'js/bundle.js' %}" async defer></script>
-        <script src="https://use.fontawesome.com/998d0f8dda.js" async defer></script>
+        <script async src="{% static 'js/bundle.js' %}" ></script>
+        <script async src="https://use.fontawesome.com/998d0f8dda.js"></script>
 
-        <script type="application/ld+json">
+        <script async defer type="application/ld+json">
             {
                 "@context": "http://schema.org",
                 "@type": "Organization",
@@ -77,6 +77,15 @@
                     {# "http://youtube.com/" #}
                 ]
             }
+        </script>
+        <script>
+            function deferVideoLoading() {
+                let mediaSourcesToDefer = document.getElementsByTagName('iframe');
+                for (i=0; i<mediaSourcesToDefer.length; i++) {
+                    mediaSourcesToDefer[i].setAttribute('src', mediaSourcesToDefer[i].getAttribute('data-src'));
+                }
+            }
+            window.onload = deferVideoLoading;
         </script>
 
     </body>

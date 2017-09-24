@@ -13,7 +13,7 @@
                     <p>Additionally, we offer photo <a href="https://youtu.be/t-Ckn35ELqU" target="blank">slideshows</a> to accompany your song. This audio and visual display creates a special centerpiece for an unforgettable event.</p>
         		</div>
         		<div class="small-12 medium-6 large-5 columns media-about">
-                    <img src="{% static 'img/music_splash_md.png' %}" alt="abstract drawing of vinyl record">
+                    <img src="{% static 'img/music_splash_sm_attributed.png' %}" alt="abstract drawing of vinyl record">
         		</div>
             </div>
         </div> <!-- end main col 1 -->
@@ -32,12 +32,12 @@
                                 <div class="media-example">
                                     <img src="{{ example.audio_image.url }}" alt="decorative image for {{ example.title }}">
                                     <audio controls class="media__example-audio">
-                                        <source src="{{ example.media.url }}" type="audio/mpeg">
-                                        Oh no! Your browser does not support the audio element. Try updating your browser.
+                                        <source src="{{ example.media.url }}" type="audio/mpeg" >
+                                        Oh no! Your browser does not support the audio element. Try updating your browser to play this audio file.
                                     </audio>
                                 </div>
                             {% elif example.media_link %}
-                                <iframe src="https://www.youtube.com/embed/{{ example.media_link|cut:'https://youtu.be/' }}" frameborder="0" allowfullscreen class="media-example"></iframe>
+                                <iframe src="" data-src="https://www.youtube.com/embed/{{ example.media_link|cut:'https://youtu.be/' }}" frameborder="0" allowfullscreen class="media-example"></iframe>
                             {% endif %}
                             <h3 class="heading__medium-example">{{ example.title }}</h3>
                             <p class="heading__sub">{{ example.product_type }}</p>
