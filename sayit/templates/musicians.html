@@ -18,10 +18,13 @@
 							<p class="heading__sub-musician">{{ musician.musical_styles }}</p>
 							<p>{{ musician.bio }}</p>
                             {% if musician.song_url_1 %}
-                                <p>Check out my songs. <a href="{{ musician.song_url_1 }}" target="_blank">{{ musician.song_name_1 }}</a></p>
+                                <p>Check out my songs:</p>
+                                <ul>
+                                    <li><a href="{{ musician.song_url_1 }}" target="_blank">{{ musician.song_name_1 }}</a></li>
                             {% endif %}
                             {% if musician.song_url_2 %}
-                                <p><a href="{{ musician.song_url_2 }}" target="_blank">{{ musician.song_name_2 }}</a></p>
+                                    <li><a href="{{ musician.song_url_2 }}" target="_blank">{{ musician.song_name_2 }}</a></li>
+                                </ul>
                             {% endif %}
                             {% if musician.profile_url %}
                                 <p><a href="{{ musician.profile_url }}" target="_blank">Check out my music.</a></p>
